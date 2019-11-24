@@ -23,6 +23,8 @@ def create_plot_pie():
 
     return graphJSON
 
+
+
 def create_plot_forecast(avg_type):
     #default SMA
     period=60

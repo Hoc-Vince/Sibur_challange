@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Детальный график прогноза</h1>
-    <div class="col-lg-6 col-md-12">
+<div class="content">
+    <h2>Детальный график прогноза</h1>
+    <div>
     <a href = {{url_for('forecast.forecast_chart', avg_type_main = 'EMA')}}>EMA</a>
     <a href = {{url_for('forecast.forecast_chart', avg_type_main = 'SMA')}}>SMA</a>
         
@@ -15,5 +16,5 @@
         </script>
     </div>
     </div>
-    
+</div>    
 {% endblock %}
