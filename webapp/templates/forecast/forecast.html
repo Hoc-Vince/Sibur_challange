@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>График влиянаия </title>
+    <title>Прогноз </title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>    
 </head>
 <body>
-    <h1>Детальный график влияния различных данных в моделе</h1>
-    <div class="chart" id="piegraph">
+    <h1>Детальный график прогноза</h1>
+    <a href = {{url_for('forecast.forecast_chart', avg_type_main = 'EMA')}}>EMA</a>
+    <a href = {{url_for('forecast.forecast_chart', avg_type_main = 'SMA')}}>SMA</a>
+        
+    
+
+    <div class="chart" id="forecast_graph">
         <script>
-            var graphs = {{plot_pie_chart_weights | safe}};
-            Plotly.plot('piegraph',graphs,{});
+            var graphs = {{plot_forecast_chart | safe}};
+            Plotly.plot('forecast_graph',graphs,{});
         </script>
     </div>
 
